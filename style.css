@@ -9,6 +9,10 @@ body {
     font-family: 'Mukta', sans-serif;
 }
 
+main {
+    height: calc(100vh - 5rem); /* -5rem = footer's height */
+}
+
 /* UTILITY STYLE */
 .flex-tool {
     display: flex;
@@ -26,17 +30,29 @@ body {
     width: 50%;
 }
 
-/* MAIN STYLE */
-main {
-    height: calc(100vh - 5rem); /* -5rem = footer's height */
-}
-
-#main-container {
-    width: calc(100% - 5rem); /* -5rem = aside's width */
-}
-
+/* ASIDE STYLE */
 aside {
     width: 5rem;
+}
+
+/* CALL TO ACTION STYLE */
+#call-action {
+    position: fixed;
+    top: 0;
+    left: 5rem; /* 5rem = aside's width */
+    height: 4rem;
+    width: calc(100% - 5rem);
+}
+
+/* NAVBAR STYLE */
+#main-nav {
+    margin-top: 4rem; /* 4rem = call-action height */
+}
+
+/* MAIN-CONTAINER-SECTION STYLE */
+#main-container {
+    width: calc(100% - 5rem); /* -5rem = aside's width */
+    overflow-y: scroll;
 }
 
 .item-container {
@@ -50,7 +66,6 @@ footer {
 }
 
 /* DEBUG */
-
 .debug main {
     background-color: tomato;
 }
@@ -76,4 +91,8 @@ footer {
     height: 6rem;
     background-color: white;
     border: 1px dotted black;
+}
+
+.debug #call-action {
+    background-color: rgba(255, 0, 0, 0.5);
 }

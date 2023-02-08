@@ -8,3 +8,40 @@
 body {
     font-family: 'Mukta', sans-serif;
 }
+
+/* UTILITY STYLE */
+.flex-tool {
+    display: flex;
+}
+
+/* MAIN STYLE */
+main {
+    height: calc(100vh - 5rem); /* -5rem = footer's height */
+}
+
+#main-page {
+    width: calc(100% - 5rem); /* -5rem = aside's width */
+}
+
+aside {
+    width: 5rem;
+}
+
+/* FOOTER STYLE */
+footer {
+    height: 5rem;
+}
+
+/* DEBUG */
+
+.debug main {
+    background-color: tomato;
+}
+
+.debug aside {
+    background-color: lightgreen;
+}
+
+.debug footer {
+    background-color: gray;
+}

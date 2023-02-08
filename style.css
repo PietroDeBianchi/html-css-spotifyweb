@@ -14,17 +14,34 @@ body {
     display: flex;
 }
 
+.wrapper {
+    flex-wrap: wrap;
+}
+
+.playlist-row {
+    list-style: none;
+}
+
+.playlist-item {
+    width: 50%;
+}
+
 /* MAIN STYLE */
 main {
     height: calc(100vh - 5rem); /* -5rem = footer's height */
 }
 
-#main-page {
+#main-container {
     width: calc(100% - 5rem); /* -5rem = aside's width */
 }
 
 aside {
     width: 5rem;
+}
+
+.item-container {
+    margin: 1.5rem;
+
 }
 
 /* FOOTER STYLE */
@@ -44,4 +61,19 @@ footer {
 
 .debug footer {
     background-color: gray;
+}
+
+.debug #main-nav {
+    background-color: lightpink;
+    height: 4rem;
+}
+
+.debug .playlist-row {
+    border: 1px solid black;
+}
+
+.debug .item-container {
+    height: 6rem;
+    background-color: white;
+    border: 1px dotted black;
 }

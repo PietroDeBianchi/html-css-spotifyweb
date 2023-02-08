@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Mukta', sans-serif;
+    background-color: rgb(40, 40, 40);
 }
 
 main {
@@ -15,6 +16,10 @@ main {
 
 h2, h4 {
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 a, span, p {
@@ -50,8 +55,19 @@ a, span, p {
     top: 0;
     left: 5rem; /* 5rem = #side-bar width */
     width: calc(100% - 5rem); /* 5rem = #side-bar width */
-    height: 4rem;
     background-color: rgba(0, 0, 0, 0.6);
+    /* flex-tool */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#action-button {
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    margin: 0.6rem 0.6rem;
+    border: 1px solid white;
+    border-radius: 1rem;
 }
 
 /* NAVBAR STYLE */
@@ -64,7 +80,7 @@ a, span, p {
     width: calc(100% - 5rem); /* 5rem = #side-bar width */
     overflow-y: scroll;
     background-color: rgb(21, 25, 33);
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 
 .item-container {

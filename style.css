@@ -26,6 +26,10 @@ a, span, p {
     color: rgb(117, 119, 123);
 }
 
+li {
+    list-style: none;
+}
+
 /* UTILITY STYLE */
 .flex-tool {
     display: flex;
@@ -73,6 +77,16 @@ a, span, p {
 /* NAVBAR STYLE */
 #main-nav {
     margin-top: 4rem; /* 4rem = #call-action height */
+}
+
+#main-nav ul {
+    margin: 0 20%;
+    justify-content: space-around;
+    padding-bottom: 0.5rem;
+}
+
+#main-nav li {
+    padding: 0.1 1rem;
 }
 
 /* MAIN-CONTAINER-SECTION STYLE */
@@ -123,9 +137,6 @@ footer {
 }
 
 /* DEBUG */
-.debug #main-nav {
-    height: 4rem;
-}
 
 .debug .playlist-row {
     border: 1px solid black;

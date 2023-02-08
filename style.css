@@ -14,6 +14,10 @@ main {
     height: calc(100vh - 5rem); /* -5rem = footer's height */
 }
 
+section {
+    margin-bottom: 5%;
+}
+
 h2, h4 {
     color: white;
 }
@@ -51,6 +55,23 @@ li {
 #side-bar {
     width: 5rem;
     background-color: black;
+    text-align: center;
+}
+
+#side-bar-container img {
+    width: 50%;
+    margin-top: 12px;
+}
+
+#side-bar-container ul {
+    /* flex-tool */
+    flex-direction: column;
+}
+
+#side-bar-container i {
+    color: rgb(117, 119, 123);
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
 }
 
 /* CALL TO ACTION STYLE */
@@ -69,7 +90,7 @@ li {
     color: white;
     font-size: 0.7rem;
     padding: 0.5rem 1rem;
-    margin: 0.6rem 0.6rem;
+    margin: 1rem 0.6rem;
     border: 1px solid white;
     border-radius: 1rem;
 }
@@ -81,12 +102,15 @@ li {
 
 #main-nav ul {
     margin: 0 20%;
-    justify-content: space-around;
-    padding-bottom: 0.5rem;
+    padding-bottom: 12px;
+    text-align: center;
+    /* flex-tool */
+    justify-content: center;
 }
 
 #main-nav li {
-    padding: 0.1 1rem;
+    font-size: 12px;
+    margin: 10px;
 }
 
 /* MAIN-CONTAINER-SECTION STYLE */

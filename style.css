@@ -245,10 +245,6 @@ footer i{
     font-size: 14px;
 }
 
-#footer-left {
-    width: 30%;
-}
-
 #footer-left .flex-tool{
     align-items: center;
 }
@@ -280,7 +276,7 @@ footer i{
 }
 
 #footer-center {
-    width: 40%;
+    margin: 0 12px;
 }
 
 #footer-center input {
@@ -289,10 +285,6 @@ footer i{
 
 .f-center-up, .f-center-down {
     justify-content: space-evenly;
-}
-
-#footer-right {
-    width: 20%;
 }
 
 #footer-right .flex-tool {
@@ -343,6 +335,10 @@ footer i{
 @media all and (min-width: 768px) {
     .playlist-item {
         width: calc(100% / 4);
+    }
+
+    #footer-center i {
+        font-size: 24px;
     }
 }
 

@@ -15,19 +15,26 @@
 <body class="debug">
     <main class="flex-tool">
 
-            <aside id="side-bar">
+            <aside id="side-bar" class="overflow-hidden">
                 <div id="side-bar-container">
-                    <img src="img/logo-small.svg" alt="Spotify Logo">
-                    <ul class="flex-tool">
-                        <li><a href=""><i class="fa-solid fa-house"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-lines-leaning" style="transform: scaleX(-1);"></i></a></li>
-                    </ul>
+                    <section id="side-bar-top">
+                        <img id="side-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                        <ul class="flex-tool">
+                            <li><a href=""><i class="fa-solid fa-house"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-lines-leaning" style="transform: scaleX(-1);"></i></a></li>
+                        </ul>
+                        <div id="side-bar-playlist">
+                        </div>
+                    </section>
+                    <section id="side-bar-footer">
+                        <a href="#"><img src="img/download.svg" alt="download" id="sidebar-download"></a>
+                        <a href="#"><img src="img/profile.svg" alt="Profile" id="sidebar-profile" ></a>
+                    </section>
                 </div>
-
             </aside>
 
-            <div id="main-container">
+            <div id="main-container" class="overflow-scroll">
 
                 <div id="call-action" class="flex-tool">
                     <a id="action-button" href="https://open.spotify.com/">EFFETUA L'UPGRADE</a>

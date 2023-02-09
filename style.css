@@ -11,15 +11,15 @@ body {
 }
 
 main {
-    height: calc(100vh - 5rem); /* -5rem = footer's height */
-}
-
-section {
-    margin-bottom: 5%;
+    height: calc(100vh - 3.5rem); /* 3.5rem = footer's height */
 }
 
 h2, h4 {
     color: white;
+}
+
+h2 {
+    font-size: 1.4rem;
 }
 
 a {
@@ -51,16 +51,29 @@ li {
     width: calc(100% / 2);
 }
 
+.overflow-hidden {
+    overflow-y: hidden;
+}
+
+.overflow-scroll {
+    overflow-y: scroll;
+}
+
 /* ASIDE STYLE */
 #side-bar {
-    width: 5rem;
+    width: 2.5rem;
     background-color: black;
     text-align: center;
 }
 
-#side-bar-container img {
-    width: 50%;
-    margin-top: 12px;
+#side-bar-top {
+    height: calc(100vh - 4rem - 3.5rem); /* 4rem + 3.5rem = aside-footer + footer's height */
+    min-height: 400px;
+}
+
+#side-logo {
+    width: 60%;
+    margin-top: 8px;
 }
 
 #side-bar-container ul {
@@ -68,18 +81,46 @@ li {
     flex-direction: column;
 }
 
+#side-bar-container li {
+    position: relative;
+}
+
 #side-bar-container i {
     color: rgb(117, 119, 123);
-    font-size: 1.8rem;
-    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    padding: 6px 0;
+    display: block
+}
+
+#side-bar-footer {
+    width: 100%;
+    height: 4rem;
+}
+
+#side-bar-footer a {
+    display: block;
+
+}
+
+#sidebar-download {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+#sidebar-profile {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: gray;
 }
 
 /* CALL TO ACTION STYLE */
 #call-action {
     position: fixed;
     top: 0;
-    left: 5rem; /* 5rem = #side-bar width */
-    width: calc(100% - 5rem); /* 5rem = #side-bar width */
+    left: 2.5rem; /* 2.5rem = #side-bar width */
+    width: calc(100% - 2.5rem); /* 2.5rem = #side-bar width */
     background-color: rgba(0, 0, 0, 0.6);
     /* flex-tool */
     justify-content: flex-end;
@@ -88,63 +129,63 @@ li {
 
 #action-button {
     color: white;
-    font-size: 0.7rem;
-    padding: 0.5rem 1rem;
-    margin: 1rem 0.6rem;
+    font-size: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.3rem 0.3rem;
     border: 1px solid white;
     border-radius: 1rem;
 }
 
 /* NAVBAR STYLE */
 #main-nav {
-    margin-top: 4rem; /* 4rem = #call-action height */
+    margin-top: 24px; /* 2rem = #call-action height */
 }
 
 #main-nav ul {
-    margin: 0 20%;
-    padding-bottom: 12px;
-    text-align: center;
     /* flex-tool */
     justify-content: center;
 }
 
 #main-nav li {
-    font-size: 12px;
-    margin: 10px;
+    font-size: 10px;
+    margin: 8px;
+    position: relative;
 }
 
 /* MAIN-CONTAINER-SECTION STYLE */
 #main-container {
-    width: calc(100% - 5rem); /* 5rem = #side-bar width */
-    overflow-y: scroll;
+    width: calc(100% - 2.5rem); /* 2.5rem = #side-bar width */
     background-color: rgb(21, 25, 33);
-    padding: 1rem 1rem;
+    padding: 16px 0;
+}
+
+#main-container section {
+    margin: 0 16px;
 }
 
 .item-container {
-    margin: 1rem;
-
+    margin: 8px 8px 8px 0; 
 }
 
 /* FOOTER STYLE */
 footer {
-    height: 5rem;
     background-color: rgb(40, 40, 40);
+    height: 3.5rem;
 }
 
 /* RESPONSIVE MEDIA */
 @media all and (min-width: 576px) {
     #side-bar {
-        width: 8rem;
+        width: 5rem;
     }
 
     #main-container {
-        width: calc(100% - 8rem); /* 7rem = #side-bar width */
+        width: calc(100% - 5rem); /* 5rem = #side-bar width */
     }
 
     #call-action {
-        left: 8rem; /* 7rem = #side-bar width */
-        width: calc(100% - 8rem); /* 7rem = #side-bar width */
+        left: 5rem; /* 6rem = #side-bar width */
+        width: calc(100% - 5rem); /* 5rem = #side-bar width */
     }
 }
 
@@ -158,6 +199,56 @@ footer {
     .playlist-item {
         width: calc(100% / 6);
     }
+}
+
+/* HOVER STYLE */
+#action-button:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+
+#main-nav a:hover {
+    color: white;
+    transition: color 0.4s ease;
+}
+
+#main-nav a::after {
+    content: "";
+    position: absolute; /* this remove the under-line from the document so when it appears it will not change the father size */
+    bottom: 0px; /* this set the under-line on the bottom */
+    left: 0; /* this set the width  */
+    right: 0; /* this this set the width */
+    height: 2px;
+    background-color: rgb(158,	208, 78);
+    transform: scaleX(0); /* this set the under-line invisible */
+    transition: transform 0.3s ease;
+}
+
+#main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+#side-bar li:hover i {
+    color: white;
+    transition: color 0.4s ease;
+}
+
+#side-bar-container li::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgb(158,	208, 78);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+#side-bar-container li:hover::after {
+    transform: scaleY(1);
 }
 
 /* DEBUG */

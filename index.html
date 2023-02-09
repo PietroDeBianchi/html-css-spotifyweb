@@ -19,17 +19,34 @@
                 <div id="side-bar-container">
                     <section id="side-bar-top">
                         <img id="side-logo" src="img/logo-small.svg" alt="Spotify Logo">
-                        <ul class="flex-tool">
-                            <li><a href=""><i class="fa-solid fa-house"></i></a></li>
-                            <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                            <li><a href=""><i class="fa-solid fa-lines-leaning" style="transform: scaleX(-1);"></i></a></li>
+                        <img id="side-logo-big" src="img/logo.svg" alt="Spotify Logo">
+                        <ul class="flex-tool" id="side-icon">
+                            <li>
+                                <a href=""><i class="fa-solid fa-house"></i></a>
+                                <span>home</span>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <span>Cerca</span>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-solid fa-lines-leaning" style="transform: scaleX(-1);"></i></a>
+                                <span>La tua libreria</span>
+                            </li>
                         </ul>
                         <div id="side-bar-playlist">
                         </div>
                     </section>
                     <section id="side-bar-bottom">
-                        <a href="#"><img src="img/download.svg" alt="download" id="sidebar-download"></a>
-                        <a href="#"><img src="img/profile.svg" alt="Profile" id="sidebar-profile" ></a>
+                        <div>
+                            <a href="#"><img src="img/download.svg" alt="download" id="sidebar-download"></a>
+                            <a href="" class="sidebottom-text"><span>installa app</span></a>
+                        </div>
+                        <hr>
+                        <div>
+                            <a href="#"><img src="img/profile.svg" alt="Profile" id="sidebar-profile" ></a>
+                            <a href="" class="sidebottom-text"><span style="font-weight: 700; color: white;">Satoshi Nakamoto</span></a>
+                        </div>
                     </section>
                 </div>
             </aside>
@@ -233,7 +250,7 @@
             <div class="f-center-up flex-tool">
                 <a href=""><i class="fa-solid fa-shuffle"></i></a>
                 <a href=""><i class="fa-solid fa-backward-step"></i></a>
-                <a href=""><i class="fa-regular fa-circle-play"></i></a>
+                <a href=""><i class="fa-regular fa-circle-play" style="font-size: 20px;"></i></a>
                 <a href=""><i class="fa-solid fa-forward-step"></i></a>
                 <a href=""><i class="fa-solid fa-arrow-rotate-right"></i></a>
             </div>

@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    height: calc(100vh - 3.5rem); /* 4rem = footer's height */
+    height: calc(100vh - 4rem); /* 4rem = footer's height */
 }
 
 h2, h3, h4, h5 {
@@ -75,7 +75,7 @@ li {
 }
 
 #side-bar-top {
-    height: calc(100vh - 4rem - 4rem); /* 4rem + 4rem = aside-footer + footer's height */
+    height: calc(100vh - 4rem - 4rem); /* 4rem - 4rem = aside-bottom + footer's height */
     min-height: 400px;
 }
 
@@ -130,6 +130,7 @@ li {
     left: 2.5rem; /* 2.5rem = #side-bar width */
     width: calc(100% - 2.5rem); /* 2.5rem = #side-bar width */
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
     /* flex-tool */
     justify-content: flex-end;
     align-items: center;

@@ -8,6 +8,7 @@
 body {
     font-family: 'Mukta', sans-serif;
     background-color: rgb(40, 40, 40);
+    min-width: 320px;
 }
 
 main {
@@ -404,6 +405,10 @@ footer i{
         width: calc(100% - 9rem); /* 9rem = #side-bar width */
     }
 
+    #footer-left .flex-tool {
+        gap: 10px;
+    }
+
     .f-center-up{
         width: 60%;
         margin: auto;
@@ -452,6 +457,7 @@ footer i{
     .foot-icon a {
         padding-left: 2px;
     }
+
 }
 
 /* HOVER STYLE */
@@ -515,5 +521,31 @@ footer i{
 
 .lay-hover:hover .hover-play {
     display: block;
+}
+
+/* sidebar-playlist */
+main {
+    overflow: hidden;
+}
+
+#side-bar {
+    overflow: hidden;
+}
+
+#side-bar-top {
+    overflow: hidden;
+}
+
+#side-bar-playlist {
+    background-color: white;
+    overflow: hidden;
+    height: 50%;
+    margin: 8px 0;
+    /* flex-tool */
+    flex-direction: column;
+}
+
+#side-bar-playlist ul {
+    overflow-y: scroll;
 }
   
